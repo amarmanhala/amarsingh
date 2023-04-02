@@ -12,14 +12,14 @@ My portfolio website includes the following features:
 - Projects page showcasing previous projects with descriptions and screenshots
 - Contact page with a contact form and links to my email, resume and social media profiles
 
-##🙏🏻 Acknowledgments 
+## 🙏🏻 Acknowledgments 
 I would like to thank the following people/resources for their help in building my portfolio website:
 
 - Akshay Saini (Namaste React)
 - Lee Robinson (Next.js)
 - Next.js documentation
 
-##📧 Contact 
+## 📧 Contact 
 If you have any questions or feedback about my portfolio website, feel free to reach out to me via [Twitter](https://twitter.com/amarsinghca "Twitter") [LinkedIn](https://www.linkedin.com/in/hyumanamar/ "LinkedIn") [Email](mailto:amar.manhala@gmail.com "Email")
 
 😊 Thank you for visiting my website! I appreciate you taking the time to explore my work and learn more about me.
