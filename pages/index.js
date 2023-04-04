@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Inter, Kaisei_Decol } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const kaisei = Kaisei_Decol({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function Home() {
   return (
@@ -16,8 +19,10 @@ export default function Home() {
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧐</text></svg>"
         ></link>
       </Head>
-      <main>
-        <h1 className="text-6xl font-bold underline">Hello world!</h1>
+      <main className="w-full h-screen flex flex-col items-center">
+        <h1 className={`text-6xl font-bold leading-relaxed ${kaisei.className}`}>Amar Singh</h1>
+        <p className="text-xl">Hi, I&apos;m Amar. I&apos;m a Front-end engineer building web apps and other cool things.</p>
+        <p className="text-xl">Find me on linkedin and twitter.</p>
       </main>
     </>
   );
