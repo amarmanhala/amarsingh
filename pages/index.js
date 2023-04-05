@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter, Kaisei_Decol } from "next/font/google";
 import Header from "@/components/Header";
+import Projects from "./Projects";
+
 
 const kaisei = Kaisei_Decol({
   subsets: ["latin"],
@@ -28,12 +30,13 @@ export default function Home() {
             Amar Singh
           </h1>
           <p className="paragraph">
-            Hi, I&apos;m Amar. I&apos;m a Front-end engineer building web apps
+            Hi, I&apos;m Amar. I&apos;m a Front-end engineer based in Toronto, building web apps
             and other cool things.
           </p>
           <p className="paragraph mt-4">I&apos;m passionate about frontend development and building things with Javascript, React, Python.</p>
           <p className="paragraph mt-4">Find me on linkedin and twitter.</p>
         </section>
+        <Projects />
       </main>
     </>
   );
