@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .paragraph {
+    @apply text-lg font-normal;
+  }
+  .container {
+    width: 740px;
+    margin: 0 auto;
+  }
+}
+

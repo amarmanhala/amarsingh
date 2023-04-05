@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import "@/styles/globals.css";
 import { Kaisei_Decol, Inter } from "next/font/google";
 
@@ -10,8 +11,8 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main>
+    <Layout>
       <Component {...pageProps} />
-    </main>
+    </Layout>
   );
 }
