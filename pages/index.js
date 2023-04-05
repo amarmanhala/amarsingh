@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter, Kaisei_Decol } from "next/font/google";
 import Header from "@/components/Header";
-import Projects from "./Projects";
+import Projects from "@/components/Projects";
 
 
 const kaisei = Kaisei_Decol({
@@ -23,7 +23,7 @@ export default function Home() {
         ></link>
       </Head>
       <main className="w-full">
-        <section className="container">
+        <section>
           <h1
             className={`text-4xl font-bold leading-relaxed ${kaisei.className}`}
           >

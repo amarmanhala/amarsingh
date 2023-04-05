@@ -13,7 +13,7 @@ const Header = () => {
       <ul className={`w-full flex font-extrabold text-lg ${kaisei.className}`}>
         <li className="mr-4"><Link href="/">home</Link></li>
         <li className="mr-4"><Link href="/about">about</Link></li>
-        <li className="mr-4"><Link href="/projects">projects</Link></li>
+        <li className="mr-4"><Link href="/work">projects</Link></li>
         <li className="mr-4"><Link href="/contact">contact</Link></li>
       </ul>
     </header>
