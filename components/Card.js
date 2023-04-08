@@ -4,7 +4,8 @@ const Card = (props) => {
   console.log(props);
   const { name, description, tags } = props.projectData;
   return (
-    <div className="rounded-md mt-6 p-8 bg-[#F6F5F4]">
+    <div className="rounded-md mt-6 p-8 bg-[#F6F5F4] card">
+     
       <h4 className="font-bold text-xl mb-2">{name}</h4>
       <p className="paragraph mb-6">{description}</p>
       <div>

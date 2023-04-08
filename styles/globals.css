@@ -1,3 +1,9 @@
+:root {
+  --shadow-elevation-medium:
+    0.4px 0.3px 0.7px hsl(var(--shadow-color) / 0.27),
+    2.8px 1.9px 4.4px -0.6px hsl(var(--shadow-color) / 0.44),
+    9.3px 6.3px 14.7px -1.3px hsl(var(--shadow-color) / 0.6);
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,5 +16,17 @@
     width: 740px;
     margin: 0 auto;
   }
+}
+.card {
+  overflow: hidden;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 250ms;
+
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition-timing-function: linear;  
 }
 
