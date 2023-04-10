@@ -27,7 +27,7 @@ export const PROJECTS = [
       "Mom's Kitchen app is a digital platform that enables users to place home cooked food orders online from a variety of mom kitchen or food vendors",
     tags: ["Front-end", "Javascript", "React", "Next.js", "TailwindCSS"],
     category: "Side Project",
-    link: "",
+    link: "/contact",
     badge: "",
   },
   {

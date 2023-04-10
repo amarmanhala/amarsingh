@@ -23,7 +23,7 @@ export default function Home() {
         ></link>
       </Head>
       <main className="w-full">
-        <section>
+        <section className="mb-24">
           <h1
             className={`text-4xl font-bold leading-relaxed ${kaisei.className}`}
           >
@@ -34,7 +34,7 @@ export default function Home() {
             and other cool things.
           </p>
           <p className="paragraph mt-4">I&apos;m passionate about frontend development and building things with Javascript, React, Python.</p>
-          <p className="paragraph mt-4">Find me on linkedin and twitter.</p>
+         
         </section>
         <Projects />
       </main>
