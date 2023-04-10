@@ -8,6 +8,7 @@ export const PROJECTS = [
     category: "Company Project",
     link: "https://axiacapitalbank.com/",
     badge: "",
+    isDisabled: false
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const PROJECTS = [
     category: "Company Project",
     link: "https://apps.apple.com/ca/app/axia-capital-bank/id1627105580",
     badge: "",
+    isDisabled: false
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ export const PROJECTS = [
     category: "Side Project",
     link: "/contact",
     badge: "",
+    isDisabled: false
   },
   {
     id: 4,
@@ -39,6 +42,7 @@ export const PROJECTS = [
     category: "Side Project",
     link: "https://chrome.google.com/webstore/detail/sikh-tab/acnhpgiohpimpfcbmlelghhlcijpbpml",
     badge: "Featured",
+    isDisabled: false
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ export const PROJECTS = [
     category: "Side Project",
     link: "https://gfind.netlify.app/",
     badge: "",
+    isDisabled: false
   },
   {
     id: 6,
@@ -61,5 +66,6 @@ export const PROJECTS = [
     category: "Side Project",
     link: "https://amarmanhala.github.io/JustExcel/",
     badge: "",
+    isDisabled: false
   },
 ];

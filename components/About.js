@@ -1,33 +1,23 @@
-import { PROJECTS } from "@/data/projects";
+
 import { kaisei } from "@/font";
 import React from "react";
-import Card from "./Card";
 
-const Projects = () => {
+const About = () => {
   return (
     <section className="mt-12">
       <header className="mb-8">
       <h2 className={`text-3xl font-bold leading-relaxed ${kaisei.className}`}>
-        Projects
+        A little about me 🙇‍♂️
       </h2>
       <p className={`paragraph ${ kaisei.className }`}>Below you’ll find a selection of my favourite projects and experiences.</p>
       </header>
 
       <div>
 
-        {PROJECTS.map(eachProject => {
-          if(eachProject.isDisabled === true) {
-            return null
-          }
-          else {
-            return (<Card key={eachProject.id} projectData={eachProject} />)
-          }
-          
-        })}
-
+      
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default About;
