@@ -24,7 +24,7 @@ const About = () => {
         <div>
        <p>My name is Amar, and I'm a Frontend engineer based in Toronto, Canada.  I have been working as developer for 4 years and have experience building scalable and responsive web applications using React.</p>
        <p className="mt-6">
-       🧑‍💻 Previously, I worked at Fintelics, supporting Commerce Manager in which businesses like Nike manage Shops on Facebook and Instagram. I led the design effort behind 0-1 features that helped the company navigate the advertising signal loss, revenue diversification, and international expansion of e-commerce operations.
+       🧑‍💻 Previously, I worked at Fintelics, allowed me to develop my skills in building complex user interfaces, creating reusable components, and collaborating with cross-functional teams. Through my responsibilities, I was able to contribute to the development of high-quality and scalable web applications that met the needs of businesses and users alike.
        </p>
        <p className="mt-6">
        🎓 With my MCA degree, I bring a strong foundation in computer science principles and a deep understanding of how they apply to web development. I have also had the opportunity to develop my programming, analytical and problem-solving skills, which have been invaluable in my work as a software engineer.
@@ -42,6 +42,9 @@ const About = () => {
        </p>
        <p className="mt-6">
        When I’m not coding, I like spending time with ☕️ Tea, 📸 taking photos of aesthetic things and 🏋️‍♀️ sporting activities.
+       </p>
+       <p className="mt-6">
+       ❤️ Thank you for taking the time to read about me.
        </p>
         </div>
       </section>
