@@ -9,7 +9,7 @@
 @tailwind utilities;
 
 @layer components {
-  .paragraph {
+  p {
     @apply text-lg font-normal;
   }
   .container {
