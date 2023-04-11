@@ -29,7 +29,15 @@ const writings = ({ allWritingsNames, tempData }) => {
       {tempData.map((temp, index) => {
         const justDoIt = JSON.parse(temp);
         console.log(JSON.parse(temp));
-        return <Link href={justDoIt.path} key={index}><h1 key={index}>{justDoIt.data.title}</h1></Link>;
+        return (
+          <>
+            <Link href={justDoIt.path} key={index}>
+              <h1 key={index}>{justDoIt.data.title}</h1>
+            </Link>
+            <p>{justDoIt.data.date}</p>
+            <p>{justDoIt.data.description}</p>
+          </>
+        );
       })}
     </>
   );
