@@ -1,4 +1,5 @@
 import fs from "fs";
+import { join } from "path";
 import Writings from "@/components/Writings";
 import Head from "next/head";
 import React from "react";
@@ -6,14 +7,7 @@ import * as matter from "gray-matter";
 import Link from "next/link";
 
 const writings = ({ allWritingsNames, tempData }) => {
-  //console.log(matter('---\ntitle: Front Matter\n---\nThis is content.'));
-  //console.log(res);
-  //console.log('Files in directory:', allWritingsNames);
-  //const dataOfFile = matter.read(allWritingsNames[0]);
-
-  //console.log(data.title);
-
-  //console.log(tempData);
+  
 
   return (
     <>
@@ -28,10 +22,12 @@ const writings = ({ allWritingsNames, tempData }) => {
       <Writings />
       {tempData.map((temp, index) => {
         const justDoIt = JSON.parse(temp);
-        console.log(JSON.parse(temp));
+        const originalString = String(justDoIt.path);
+        const modifiedString = originalString.replace("pages/", "");
+        const finalString = modifiedString.replace(".mdx", "");
         return (
           <>
-            <Link href={justDoIt.path} key={index}>
+            <Link href={finalString} key={index}>
               <h1 key={index}>{justDoIt.data.title}</h1>
             </Link>
             <p>{justDoIt.data.date}</p>
@@ -46,12 +42,8 @@ const writings = ({ allWritingsNames, tempData }) => {
 export async function getStaticProps() {
   // Fetch data from an API or other data source
 
-  //const newestContent = await getLatestContent({ limit: 20 });
   const allWritingsNames = await fs.readdirSync("pages/writings");
 
-  const { content, data } = await matter.read(
-    "pages/writings/" + allWritingsNames[0]
-  );
 
   let tempData = [];
 
