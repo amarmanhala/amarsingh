@@ -4,7 +4,7 @@ import Head from "next/head";
 import React from "react";
 import * as matter from "gray-matter";
 import Link from "next/link";
-import { getPostData } from "@/lib/getPostData";
+import { getAllPostData } from "@/lib/getPostData";
 
 const writings = ({ tempData }) => {
   console.log(tempData);
@@ -21,7 +21,7 @@ const writings = ({ tempData }) => {
       <Writings />
       {tempData.map((temp, index) => {
         const justDoIt = JSON.parse(temp);
-        console.log(justDoIt.content);
+       
         const originalString = String(justDoIt.path);
         const modifiedString = originalString.replace("pages/writings/", "");
         const finalString = modifiedString.replace(".mdx", "");
@@ -47,7 +47,7 @@ export async function getStaticProps() {
   // Return the fetched data as props
   return {
     props: {
-      tempData: await getPostData()
+      tempData: await getAllPostData()
     },
   };
 }
