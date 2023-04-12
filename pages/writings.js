@@ -1,14 +1,13 @@
-import fs from "fs";
-import { join } from "path";
+
 import Writings from "@/components/Writings";
 import Head from "next/head";
 import React from "react";
 import * as matter from "gray-matter";
 import Link from "next/link";
+import { getPostData } from "@/lib/getPostData";
 
-const writings = ({ allWritingsNames, tempData }) => {
-  
-
+const writings = ({ tempData }) => {
+  console.log(tempData);
   return (
     <>
       <Head>
@@ -22,12 +21,13 @@ const writings = ({ allWritingsNames, tempData }) => {
       <Writings />
       {tempData.map((temp, index) => {
         const justDoIt = JSON.parse(temp);
+        console.log(justDoIt.content);
         const originalString = String(justDoIt.path);
-        const modifiedString = originalString.replace("pages/", "");
+        const modifiedString = originalString.replace("pages/writings/", "");
         const finalString = modifiedString.replace(".mdx", "");
         return (
           <>
-            <Link href={finalString} key={index}>
+            <Link href={"/post/" + finalString} key={index}>
               <h1 key={index}>{justDoIt.data.title}</h1>
             </Link>
             <p>{justDoIt.data.date}</p>
@@ -40,24 +40,14 @@ const writings = ({ allWritingsNames, tempData }) => {
 };
 
 export async function getStaticProps() {
-  // Fetch data from an API or other data source
 
-  const allWritingsNames = await fs.readdirSync("pages/writings");
-
-
-  let tempData = [];
-
-  allWritingsNames.map((eachWriting) => {
-    const data = matter.read("pages/writings/" + eachWriting);
-    tempData.push(JSON.stringify(data));
-  });
+ 
+  
 
   // Return the fetched data as props
   return {
     props: {
-      allWritingsNames,
-
-      tempData,
+      tempData: await getPostData()
     },
   };
 }
