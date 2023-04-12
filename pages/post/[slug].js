@@ -1,5 +1,7 @@
+import * as matter from 'gray-matter';
 import { getAllPostBySlug } from "@/lib/getPostBySlug";
 import { useRouter } from "next/router";
+
 
 export async function getStaticPaths() {
   // Fetch the dynamic paths from an API or a data source
@@ -16,19 +18,27 @@ export async function getStaticPaths() {
   };
 }
 
-const Post = ({ blogContent }) => {
-  console.log(blogContent);
+const Post = ({ post, test }) => {
+  
   const router = useRouter();
   const { slug } = router.query;
 
-  return <p>Post: {slug}</p>;
+  const data = JSON.parse(post);
+  
+  console.log(data)
+
+  return <p>Post: {data.content}</p>;
 };
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
   // Return the fetched data as props
+  const { slug } = params; // Access the slug value from params object
+  let post = await getAllPostBySlug(slug);
+ 
   return {
     props: {
-      blogContent: await getAllPostBySlug(),
+      post,
+      test: slug
     },
   };
 }
